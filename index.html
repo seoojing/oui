@@ -1,0 +1,2424 @@
+<!DOCTYPE html>
+<html>
+<title>7층</title>
+<style>
+@font-face {
+      font-family: "DungGeunMo";
+      src: url("DungGeunMo.woff");
+    }
+	
+	body{background-color: #484535; font-family: "DungGeunMo"; overflow:hidden}
+
+	#backk{width: auto; height: 100%; animation:start 2s alternate;}
+	#backk img{width: 1250px; height: auto;}
+	
+	#backk2{ display: none; width: auto; height: 100%;  position: absolute; top: 15px;}
+	#backk2 img{width: 1250px; height: auto;}
+
+
+
+
+a2 { color: black;
+	position: absolute;
+	width: 53ch;
+	margin: 21em 8em;
+	cursor: pointer;
+	}
+
+a2:hover{ color: white;
+	position: absolute;	
+	width: 53ch;
+	margin: 21em 8em;
+	}
+
+	#book { position: absolute; z-index: 99;cursor: pointer;top:2%; right: -1%; animation:start 2s alternate;}
+	#book img{ position: absolute; width: 80px; height:auto; z-index: 99;cursor: pointer;}
+	#book:hover {opacity: 0.7}
+
+	#map { position: absolute; z-index: 99;cursor: pointer;top:12%; right: -1%; animation:start 2s alternate;}
+	#map img{ position: absolute; width: 80px; height:auto; z-index: 99;cursor: pointer;}
+	#map:hover {opacity: 0.7}
+
+	#mapc { position: absolute; z-index: 99;cursor: pointer;top:12%; right: -1%; display: none;}
+	#mapc img{ position: absolute; width: 80px; height:auto; z-index: 99;cursor: pointer;}
+	#mapc:hover {opacity: 0.7}
+
+	#hint { position: absolute; z-index: 99;cursor: pointer;top:22%; right: -1%; animation:start 2s alternate;}
+	#hint img{ position: absolute; width: 80px; height:auto; z-index: 99;cursor: pointer;}
+	#hint:hover {opacity: 0.7}
+
+	#hint2 { position: absolute; z-index: 99;cursor: pointer;top:22%; right: -1%; display: none;}
+	#hint2 img{ position: absolute; width: 80px; height:auto; z-index: 99;cursor: pointer;}
+	#hint2:hover {opacity: 0.7}
+
+	#smart { position: absolute; z-index: 99;cursor: pointer;top:32%; right: -1%; animation:start 2s alternate;}
+	#smart img{ position: absolute; width: 80px; height:auto; z-index: 99;cursor: pointer;}
+	#smart:hover {opacity: 0.7}
+
+	#tada { position: absolute; z-index: 99;top:4%; right: 78%; animation:start 2s alternate; display: none;preload;}
+	#tada img{ position: absolute; width: 700px; auto; z-index: 99; preload;}
+	#tada2 { position: absolute; z-index: 99;top:4%; right: 78%; display: none;}
+	#tada2 img{ position: absolute; width: 700px; auto; z-index: 99;}
+	#tada3 { position: absolute; z-index: 99;top:4%; right: 78%; display: none;}
+	#tada3 img{ position: absolute; width: 700px; auto; z-index: 99;}
+	#tada4 { position: absolute; z-index: 99;top:4%; right: 78%; display: none;}
+	#tada4 img{ position: absolute; width: 700px; auto; z-index: 99;}
+
+	#tada5 { position: absolute; z-index: 99;top:4%; right: 78%; display: none;}
+	#tada5 img{ position: absolute; width: 700px; auto; z-index: 99;}
+
+	#tada6 { position: absolute; z-index: 99;top:4%; right: 78%; display: none;}
+	#tada6 img{ position: absolute; width: 700px; auto; z-index: 99;}
+
+	#tada7 { position: absolute; z-index: 99;top:4%; right: 78%; display: none;}
+	#tada7 img{ position: absolute; width: 700px; auto; z-index: 99;}
+
+	#tada8 { position: absolute; z-index: 99;top:4%; right: 78%; display: none;}
+	#tada8 img{ position: absolute; width: 700px; auto; z-index: 99;}
+
+	#tada9 { position: absolute; z-index: 99;top:4%; right: 78%; display: none;}
+	#tada9 img{ position: absolute; width: 700px; auto; z-index: 99;}
+
+	#tada10 { position: absolute; z-index: 99;top:4%; right: 78%; display: none;}
+	#tada10 img{ position: absolute; width: 700px; auto; z-index: 99;}
+
+	#tada11 { position: absolute; z-index: 99;top:4%; right: 78%; display: none;}
+	#tada11 img{ position: absolute; width: 700px; auto; z-index: 99;}
+
+	#logo{top: -5%; left: 47%; position: absolute;}
+	#logo img{width: 120px; height: auto;}
+	
+	#flashlight{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+
+
+	#bx { position: absolute; bottom: 7%; left: 20%; display: none;}
+	#bx img{ width: 75%; height: auto;  }
+	#bx2 { position: absolute; bottom: 7%; left: 20%; display: none;z-index: 10;}
+	#bx2 img{ width: 75%; height: auto;  }
+
+	#hinttxt{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";z-index: 10;}
+
+	#yaa{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 43%;font-family: "DungGeunMo";cursor: pointer;z-index: 10;}
+	#yaa:hover{color: white; }
+	#yaa3{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 43%;font-family: "DungGeunMo";cursor: pointer;}
+	#yaa3:hover{color: white; }
+
+
+	#noo{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 55%;font-family: "DungGeunMo";cursor: pointer;z-index: 10;}
+	#noo:hover{color: white; }
+	#foo{bottom: 16%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none; animation: tong 2s infinite;}
+		#foo img{height: 20px;width: auto; }
+
+	#poom{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom2{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom3{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom4{bottom: 9%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+
+	#poom5{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom6{bottom: 9%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom7{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom8{bottom: 9%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom9{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom10{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+
+	#poom11{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom12{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";z-index: 999;}
+	#poom13{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom14{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom15{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom16{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom17{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom18{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom19{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom20{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom21{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom22{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+
+	#yaa2{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";cursor: pointer;}
+	#yaa2:hover{color: white; }
+	#noo2{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 50%;font-family: "DungGeunMo";cursor: pointer;}
+	#noo2:hover{color: white; }
+
+	#noo3{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 47%;font-family: "DungGeunMo";cursor: pointer;}
+	#noo3:hover{color: white; }
+	#vaa3{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 59%;font-family: "DungGeunMo";cursor: pointer;}
+	#vaa3:hover{color: white; }
+
+
+
+	#nn{bottom: 18%; font-weight: 5px; font-size: 1.5em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#nn2{bottom: 18%; font-weight: 5px; font-size: 1.5em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#nn3{bottom: 18%; font-weight: 5px; font-size: 1.5em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#okk{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none; animation: tong 2s infinite;}
+		#okk img{height: 50px;width: auto; }
+
+	#okkk{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none; animation: tong 2s infinite;}
+		#okkk img{height: 50px;width: auto; }
+
+
+	#oo{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none; animation: tong 2s infinite;}
+		#oo img{height: 50px;width: auto; }
+	#ooo{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#ooo img{height: 50px;width: auto; }
+	#oooo{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#oooo img{height: 50px;width: auto; }	
+	#ooooo{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#ooooo img{height: 50px;width: auto; }
+
+	#ko{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none; animation: tong 2s infinite;}
+		#ko img{height: 50px;width: auto; }
+	#koo{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none; animation: tong 2s infinite;}
+		#koo img{height: 50px;width: auto; }
+	#kooo{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#kooo img{height: 50px;width: auto; }
+	#koooo{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#koooo img{height: 50px;width: auto; }	
+	#kooooo{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#kooooo img{height: 50px;width: auto; }	
+	#koooooo{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#koooooo img{height: 50px;width: auto; }	
+	#koooooo{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#koooooo img{height: 50px;width: auto; }	
+	#kooooooo{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#kooooooo img{height: 50px;width: auto; }	
+
+	#next{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next img{height: 50px;width: auto; }
+	#next1{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next1 img{height: 50px;width: auto; }
+	#next2{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next2 img{height: 50px;width: auto; }
+
+	#next3{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next3 img{height: 50px;width: auto; }
+
+	#next4{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next4 img{height: 50px;width: auto; }
+
+	#next5{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none; animation: tong 2s infinite;}
+		#next5 img{height:50px; width: auto;  }
+
+	#next6{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next6 img{height: 50px;width: auto;  }
+	#next7{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next7 img{height: 50px;width: auto;  }
+	#next8{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next8 img{height: 50px;width: auto; }
+	#next9{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next9 img{height: 50px;width: auto; }
+	#next10{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next10 img{height:50px;width: auto;  }
+	#next11{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next11 img{height: 50px;width: auto;  }
+		#next12{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next12 img{height: 50px;width: auto;  }
+	#next13{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next13 img{height: 50px;width: auto;  }
+	#next14{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next14 img{height: 50px;width: auto;  }
+	#next15{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next15 img{height: 50px;width: auto;  }
+	#next16{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next16 img{height: 50px;width: auto;  }
+	#next17{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next17 img{height: 50px;width: auto;  }
+	#next18{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next18 img{height: 50px;width: auto;  }
+	#next19{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next19 img{height: 50px;width: auto;  }
+	#next20{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next20 img{height: 50px;width: auto;  }
+	#next21{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next21 img{height: 50px;width: auto;  }
+	#next22{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next22 img{height: 50px;width: auto;  }
+	#next23{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next23 img{height: 50px;width: auto;  }
+	#next24{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next24 img{height: 50px;width: auto;  }
+	#next25{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next25 img{height: 50px;width: auto;  }
+	#next26{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next26 img{height: 50px;width: auto;  }
+	#next27{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next27 img{height: 50px;width: auto;  }
+	#next28{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next28 img{height: 50px;width: auto;  }
+	#next29{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next29 img{height: 50px;width: auto;  }
+	#next30{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next30 img{height: 50px;width: auto;  }
+	#next31{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next31 img{height: 50px;width: auto;  }
+	#next32{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next32 img{height: 50px;width: auto;  }
+	#next33{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next33 img{height: 50px;width: auto;  }
+	#next34{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next34 img{height: 50px;width: auto;  }
+
+	#soun { position: absolute; z-index: 99;cursor: pointer;bottom: 80%; right: 54%;  display: none;}
+	#soun img{ position: absolute; width: 50px; height:50px; z-index: 101;cursor: pointer;}
+
+	#soun2 { position: absolute; z-index: 99;cursor: pointer;bottom: 80%; right: 48%;display: none; }
+	#soun2 img{ position: absolute; width: 50px; height:50px; z-index: 101;cursor: pointer;}
+
+	#soun3 { position: absolute; z-index: 99;cursor: pointer;bottom: 80%; right: 43%; display: none; }
+	#soun3 img{ position: absolute; width: 50px; height:50px; z-index: 101;cursor: pointer;}
+
+	#soun4 { position: absolute; z-index: 99;cursor: pointer;bottom: 80%; right: 37%; display: none; }
+	#soun4 img{ position: absolute; width: 50px; height:50px; z-index: 101;cursor: pointer;}
+
+	#soun5 { position: absolute; z-index: 99;cursor: pointer;bottom: 72%; right: 54%; display: none; }
+	#soun5 img{ position: absolute; width: 50px; height:50px; z-index: 101;cursor: pointer;}
+
+	#soun6 { position: absolute; z-index: 99;cursor: pointer;bottom: 72%; right: 48%; display: none; }
+	#soun6 img{ position: absolute; width: 50px; height:50px; z-index: 101;cursor: pointer;}
+
+	#soun7 { position: absolute; z-index: 99;cursor: pointer;bottom: 72%; right: 43%;display: none;  }
+	#soun7 img{ position: absolute; width: 50px; height:50px; z-index: 101;cursor: pointer;}
+/* 하단 */
+	#soun8 { position: absolute; z-index: 99;cursor: pointer;bottom: 36%; right: 54%; display: none; }
+	#soun8 img{ position: absolute; width: 50px; height:50px; z-index: 101;cursor: pointer;}
+
+	#soun9 { position: absolute; z-index: 99;cursor: pointer;bottom: 36%; right: 48%; display: none; }
+	#soun9 img{ position: absolute; width: 50px; height:50px; z-index: 101;cursor: pointer;}
+
+	#soun10 { position: absolute; z-index: 99;cursor: pointer;bottom: 36%; right: 43%; display: none; }
+	#soun10 img{ position: absolute; width: 50px; height:50px; z-index: 101;cursor: pointer;}
+
+	#soun11 { position: absolute; z-index: 99;cursor: pointer;bottom: 36%; right: 37%; display: none; }
+	#soun11 img{ position: absolute; width: 50px; height:50px; z-index: 101;cursor: pointer;}
+
+	#musi {display: none; }
+	#music { position: absolute; z-index: 99;cursor: pointer;bottom: 4%; left: 25%; display: none;}
+	#music img{ position: absolute; width: 10px; height:10px; z-index: 101;cursor: pointer;}
+	#music2 { position: absolute; z-index: 99;cursor: pointer;bottom: 4%; left: 25%;display: none; }
+	#music2 img{ position: absolute; width: 10px; height:10px; z-index: 101;cursor: pointer;}
+
+a5 { 
+	font-weight:bold;
+	color: #0d0a06;
+	bottom: -1%;
+	position: absolute;
+	}
+
+
+
+	#hyun { position: absolute; top:1.5%; right: 3%; animation:start 2s alternate; z-index: -1;}
+	#hyun img{ position: absolute; width: 140px;  }
+
+	/*사물함 안*/
+	#saa1 { position: absolute; z-index: 98;top:5%; right: 86%;  display: none;}
+	#saa1 img{ position: absolute; width: 900px; auto; z-index: 99;}
+
+
+	#mim { position: absolute; z-index: 99;top:7%; right: 78%; animation:start 2s alternate;display: none; cursor: pointer;}
+	#mim img{ position: absolute; width: 800px; auto; z-index: 99;}
+	#mimi { position: absolute; z-index: 99; right: 57.5%;  animation:mimia 2s infinite; display: none;}
+	#mimi img{ position: absolute; width: 30px; auto; z-index: 99;}
+@keyframes mimia{
+			0%{top: 52%;}
+			
+			50%{top: 55%;}
+			100%{top: 52%;}
+		}	
+
+
+/*카드*/
+
+#cc{animation:tra 2s alternate;}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 400px;
+  background: #c6c2ae;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%) perspective(2000px);
+  box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.5),
+    0 20px 100px rgba(0, 0, 0, 0.5);
+  transition: 1s;
+}
+
+.card:hover {
+  transform: translate(-50%, -50%) perspective(2000px) rotate(-10deg);
+  box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5),
+    0 10px 100px rgba(0, 0, 0, 0.5);
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--background);
+  transform-origin: bottom;
+  transform: skewX(-45deg);
+}
+
+.card:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 5px;
+  height: 100%;
+  background: var(--background);
+  transform-origin: left;
+  transform: skewY(-45deg);
+}
+
+.card .imgBox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-origin: left;
+  transition: 1s cubic-bezier(0.15, 1.7, 0.84, 0.58);
+  z-index: 1;
+}
+
+.card:hover .imgBox {
+  transform: rotateY(-135deg);
+}
+
+.card .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 5px;
+  z-index: -1;
+  line-height: 150%;
+}
+
+#aa{}
+
+/*카드*/
+
+
+
+
+
+
+
+
+
+/*박지*/
+
+
+	#what3 {bottom: 8%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";cursor: pointer;}
+	#what3:hover{color: white; }
+
+	#what2 {bottom: 8%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";cursor: pointer;}
+	#what2:hover{color: white; }
+
+
+	#face1 { position: absolute; z-index: 9;  left: 0%; display: none; bottom: 45.5%; animation:start 1s alternate;}
+	#face1 img{ position: absolute; width: 370px; height: auto; z-index: 99;}
+
+	#face2 { position: absolute; z-index: 9;  left: 0%; display: none; bottom: 45.5%; animation:start 1s alternate;}
+	#face2 img{ position: absolute; width: 370px; height: auto; z-index: 99;}
+	#face3 { position: absolute; z-index: 9;  left: 0%; display: none; bottom: 45.5%; animation:start 1s alternate;}
+	#face3 img{ position: absolute; width: 370px; height: auto; z-index: 99;}
+
+	#face4 { position: absolute; z-index: 9;  left: 0%; display: none; bottom: 45.5%; animation:start 1s alternate;}
+	#face4 img{ position: absolute; width: 370px; height: auto; z-index: 99;}
+	#face5 { position: absolute; z-index: 9;  left: 0%; display: none; bottom: 45.5%; animation:start 1s alternate;}
+	#face5 img{ position: absolute; width: 370px; height: auto; z-index: 99;}
+
+
+
+	#chang { position: absolute; z-index: 9;  left: 0%; display: none; bottom: 45.5%; animation:start 2s alternate;}
+	#chang img{ position: absolute; width: 370px; height: auto; z-index: 99;}
+
+	#sigar { position: absolute; z-index: 99;cursor: pointer; bottom:70%; left: 55%;}
+	#sigar img{ position: absolute; width: 300px; height: 100px;z-index: 99;cursor: pointer;}
+	
+	#bit { position: absolute; z-index: 99; bottom:30%; left: 35%;}
+	#bit img{ position: absolute; width: 50px; z-index: 99;}
+
+	#lefi{top: 45%; left:10%; position: absolute; animation: lef 3s alternate; }
+	#lefi img{width: 40px; height: auto; cursor: pointer; }
+
+	#yoyo{top: 45%; left: 69%; position: absolute; animation: her 3s alternate; }
+	#yoyo img{width: 40px; height: auto; cursor: pointer; }
+	#yoyo2{top: 45%; left: 75%; position: absolute; animation: hery 3s alternate; display: none;}
+	#yoyo2 img{width: 40px; height: auto; cursor: pointer; }
+
+	#turn{bottom: 8%; left:47%; position: absolute; animation: backk 3s alternate; }
+	#turn img{width: 40px; height: auto;cursor: pointer; }
+
+	#fronts{top: 65%; left: 47%; position: absolute; animation: inin 3s alternate; }
+	#fronts img{width: 38px; height: auto;cursor: pointer; }
+
+
+
+	#jungg1{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg2{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg3{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg4{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg5{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg6{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg7{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg8{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg9{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg10{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg11{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg12{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg13{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg14{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg15{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg16{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg17{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg18{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg19{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg20{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg21{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg22{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg23{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg24{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg25{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg26{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg27{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg28{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg29{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg30{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg31{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg32{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg33{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg34{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg35{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg36{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg37{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg38{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#kii{bottom: 15%; right: 25%;z-index: 999; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#kii img{height: 50px;width: auto;  }
+
+@keyframes lef{
+			0%{left: 12% ;}
+			
+			100%{left: 10% ;}
+		}
+@keyframes her{
+			0%{left:  67%;}
+			
+			100%{left: 69%;}
+		}
+@keyframes hery{
+			0%{left:  73%;}
+			
+			100%{left: 75%;}
+		}		
+@keyframes inin{
+			0%{top: 68%;
+				 }
+			
+			100%{top: 65%; 
+				}
+		}	
+	#dd { position: absolute; z-index: 99;cursor: pointer; top:3%; right: 20%; display: none;}
+	#dd img{ position: absolute; width: auto; height: 50px;z-index: 99;cursor: pointer;}
+
+	#tt { position: absolute; z-index: 99; top: 8%; left: 37%; animation: tra 2s alternate; display: none;cursor: pointer; }
+	#tt img{ position: absolute; z-index: 99; width: 500px; height: auto; }	
+
+	#container{position: relative; margin: auto; width:1250px; height: 1000px;font-family: "DungGeunMo"; top: 60px;}
+
+#tat2{bottom: 55%; font-weight: 800; font-size: 2em; left:   30%;font-family: "DungGeunMo"; z-index: 999; line-height: 1.7; animation: tam 3s alternate; display: none;}
+	#inn{bottom: 30%; font-weight: 600; font-size: 1.3em; right:  0%;font-family: "DungGeunMo"; z-index: 999; line-height: 1.7; animation: tam 3s alternate; display: none;}
+#tat{bottom: 55%; font-weight: 800; font-size: 2em; left:   30%;font-family: "DungGeunMo"; z-index: 999; line-height: 1.7; animation: tam 3s alternate; display: none;}
+	#info { position: absolute; z-index: 99;cursor: pointer; top:3%; right: 22%; animation: infom 5s alternate; display: none;}
+	#info img{ position: absolute; width: auto; height: 40px;z-index: 99;cursor: pointer;}
+
+#too { position: absolute; z-index: 99; top:30%; left: 25%; animation:tam 2s alternate;display: none; cursor: pointer;}
+#too img{ position: absolute; width: 700px; height: auto; z-index: 99;}
+
+/* 힌트영역 */
+
+ #hin1{bottom:68%; right: 42%; position: absolute; display: none;} 
+  #hin1 img{width: auto; height: 40px;animation:hintt 3s alternate; opacity: 0;z-index: 99;}
+
+ #hin2{  bottom: 56%; right: 28%; position: absolute;display: none;z-index: 199;} 
+  #hin2 img{width: auto; height: 40px; animation:hintt 3s alternate; opacity: 0; z-index: 199;}
+
+ #hin3{ top: 63%; right:75%; position: absolute; display: none;} 
+  #hin3 img{width: auto; height: 40px; animation:hintt 3s alternate; opacity: 0;  z-index: 99;}
+
+ #hin4{ top: 38%; right:46%; position: absolute; display: none;} 
+  #hin4 img{width: auto; height: 40px; animation:hintt 3s alternate; opacity: 0;  z-index: 99;}
+
+	#heyy{bottom: 7%; font-weight: 5px; font-size: 1em;display:none; left: 64%;font-family: "DungGeunMo";cursor: pointer;}
+	#heyy:hover{color: white; }
+
+/* Parent Container */
+/* 교수님 사무실 */
+#saw{
+position: absolute;
+ width:90px;
+ height: 620px;
+ float: left;
+ margin-right: 10px;
+  bottom:13%; left: 67%;
+  margin-right: 10px;
+}
+
+/* Child Text Container */
+#saw div{
+ position: absolute;
+ bottom:10%; left: 55%;
+ background: #262621;
+ color: #a2a09a;
+ font-family: "DungGeunMo";
+      src: url("DungGeunMo.woff");
+ opacity: 0;
+ visibility: hidden;
+ -webkit-transition: visibility 0s, opacity 0.5s linear; 
+ transition: visibility 0s, opacity 0.5s linear;
+ margin-bottom: 5px;
+ line-height:150%;
+  font-size:0.9em;
+}
+
+/* Hover on Parent Container */
+#saw:hover{
+ cursor: pointer;
+}
+
+#saw:hover div{
+ width: 160px;
+ visibility: visible;
+ opacity: 0.7; 
+ position: absolute;
+ padding: 8px 15px;
+border-radius: 5px;
+bottom:20%; left: -65%;
+}
+
+/* 교수님 사무실 */
+#content_imgd{
+position: absolute;
+ width:90px;
+ height: 620px;
+ float: left;
+ margin-right: 10px;
+  bottom:13%; left: 67%;
+  margin-right: 10px;
+}
+
+/* Child Text Container */
+#content_imgd div{
+ position: absolute;
+ bottom:10%; left: 55%;
+ background: #262621;
+ color: #a2a09a;
+ font-family: "DungGeunMo";
+      src: url("DungGeunMo.woff");
+ opacity: 0;
+ visibility: hidden;
+ -webkit-transition: visibility 0s, opacity 0.5s linear; 
+ transition: visibility 0s, opacity 0.5s linear;
+ margin-bottom: 5px;
+ line-height:150%;
+  font-size:0.9em;
+}
+
+/* Hover on Parent Container */
+#content_imgd:hover{
+ cursor: pointer;
+}
+
+#content_imgd:hover div{
+ width: 160px;
+ visibility: visible;
+ opacity: 0.7; 
+ position: absolute;
+ padding: 8px 15px;
+border-radius: 5px;
+bottom:20%; left: -65%;
+}
+
+
+/* 교수님 사무실 */
+#see{ 
+position: absolute;
+ width:50px;
+ height: 600px;
+ float: left;
+ margin-right: 10px;
+  bottom:13%; left: 59%;
+  margin-right: 10px;
+}
+
+/* Child Text Container */
+#see div{
+ position: absolute;
+ bottom:10%; left: 55%;
+ background: #262621;
+ color: #a2a09a;
+ font-family: "DungGeunMo";
+      src: url("DungGeunMo.woff");
+ opacity: 0;
+ visibility: hidden;
+ -webkit-transition: visibility 0s, opacity 0.5s linear; 
+ transition: visibility 0s, opacity 0.5s linear;
+ margin-bottom: 5px;
+ line-height:150%;
+  font-size:0.9em;
+}
+
+/* Hover on Parent Container */
+#see:hover{
+ cursor: pointer;
+}
+
+#see:hover div{
+ width: 160px;
+ visibility: visible;
+ opacity: 0.7; 
+ position: absolute;
+ padding: 8px 15px;
+border-radius: 5px;
+bottom:50%; left: -105%;
+}
+
+
+/* 교수님 사무실 */
+#see2{
+position: absolute;
+ width:50px;
+ height: 400px;
+ float: left;
+ margin-right: 10px;
+  bottom:26%; left: 53%;
+  margin-right: 10px;
+}
+
+/* Child Text Container */
+#see2 div{
+ position: absolute;
+ bottom:10%; left: 55%;
+ background: #262621;
+ color: #a2a09a;
+ font-family: "DungGeunMo";
+      src: url("DungGeunMo.woff");
+ opacity: 0;
+ visibility: hidden;
+ -webkit-transition: visibility 0s, opacity 0.5s linear; 
+ transition: visibility 0s, opacity 0.5s linear;
+ margin-bottom: 5px;
+ line-height:150%;
+  font-size:0.9em;
+}
+
+/* Hover on Parent Container */
+#see2:hover{
+ cursor: pointer;
+}
+
+#see2:hover div{
+ width: 160px;
+ visibility: visible;
+ opacity: 0.7; 
+ position: absolute;
+ padding: 8px 15px;
+border-radius: 5px;
+bottom:50%; left: -105%;
+}
+
+/* 정수기 */
+#content4_img{
+position: absolute;
+ width: 100px;
+ height: 160px;
+ float: left;
+ margin-right: 10px;
+  bottom:58%; right: 49%;
+  margin-right: 10px;
+}
+
+/* Child Text Container */
+#content4_img div{
+ position: absolute;
+ bottom:0%; left: 25%;
+ background: #262621;
+ color: #a2a09a;
+ font-family: "DungGeunMo";
+      src: url("DungGeunMo.woff");
+ opacity: 0;
+ visibility: hidden;
+ -webkit-transition: visibility 0s, opacity 0.5s linear; 
+ transition: visibility 0s, opacity 0.5s linear;
+ margin-bottom: 5px;
+ line-height:150%;
+  font-size:0.9em;
+}
+
+/* Hover on Parent Container */
+#content4_img:hover{
+ cursor: pointer;
+}
+
+#content4_img:hover div{
+ width: 220px;
+ visibility: visible;
+ opacity: 0.7; 
+ position: absolute;
+ padding: 8px 15px;
+border-radius: 5px;
+bottom:-30%; left: -50%;
+}
+
+
+
+
+	/*대답*/
+
+	#ch{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 29.5%;font-family: "DungGeunMo";cursor: pointer; z-index: 111;}
+	#ch:hover{color: white; }
+
+	#choose{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 52%;font-family: "DungGeunMo";cursor: pointer;z-index: 111;}
+	#choose:hover{color: white; }
+
+	#ch3{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 29.5%;font-family: "DungGeunMo";cursor: pointer; z-index: 111;}
+	#ch3:hover{color: white; }
+
+	#choose3{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 52%;font-family: "DungGeunMo";cursor: pointer;z-index: 111;}
+	#choose3:hover{color: white; }
+
+	#ch4{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 29.5%;font-family: "DungGeunMo";cursor: pointer; z-index: 111;}
+	#ch4:hover{color: white; }
+
+	#choose4{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 52%;font-family: "DungGeunMo";cursor: pointer;z-index: 111;}
+	#choose4:hover{color: white; }
+
+	#ch5{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 29.5%;font-family: "DungGeunMo";cursor: pointer; z-index: 111;}
+	#ch5:hover{color: white; }
+
+	#choose5{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 52%;font-family: "DungGeunMo";cursor: pointer;z-index: 111;}
+	#choose5:hover{color: white; }
+
+	#ch6{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 29.5%;font-family: "DungGeunMo";cursor: pointer; z-index: 111;}
+	#ch6:hover{color: white; }
+
+	#choose6{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 52%;font-family: "DungGeunMo";cursor: pointer;z-index: 111;}
+	#choose6:hover{color: white; }
+
+
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: #484535; } }
+
+@keyframes start{
+			0%{opacity: 0;}
+			
+			100%{opacity: 1;}
+		}
+
+@keyframes tong{
+			0%{bottom: 14%;}
+			50%{bottom: 15%;}
+			100%{bottom: 14%;}
+		}
+		
+
+@keyframes backk{
+			0%{bottom: 11%;}
+			
+			100%{bottom: 8%;}
+		}
+@keyframes ne{
+			0%{bottom: 17%;}
+			
+			100%{bottom: 15%;}
+		}				
+@keyframes dd{
+			0%{left:13% ;}
+			
+			100%{left:10%;}
+		}		
+
+
+@keyframes tra{
+			0%{opacity: 0}
+			
+			100%{opacity: 1}
+		}
+@keyframes gogo{
+			0%{bottom: 27%;}
+			
+			100%{bottom: 30%;}
+		}
+
+	
+@keyframes infom
+			{0%{opacity: 0;}
+			30%{opacity: 1;}
+			60%{opacity: 0;}
+			100%{opacity: 1;}
+		}
+	@keyframes tam{
+			0%{opacity: 0;}
+			
+			100%{opacity: 1;}
+		}
+@keyframes hintt{
+			0%{ opacity: 0;}
+			50%{ opacity: 1;}
+			100%{ opacity: 0;}
+		}
+h1 { 
+	color: #484535;
+	border-right: .0em solid #26241B;
+	 
+	width: 26ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.5s steps(15, end),
+	           blink-caret .1s step-end infinite alternate;z-index: 3;
+}
+h2 { 
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 55ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.6s steps(23, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h3 { 
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 48ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.6s steps(23, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h4 { 
+	color: #484535;
+ 
+	width: 32ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.6s steps(16, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h5 { 
+	color: #484535;
+	 
+	width: 70ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.8s steps(20, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h6 { font-weight:bold;
+	color: #484535;
+	 
+	width:70ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.8s steps(30, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h7 { font-weight:bold;
+	color: #484535;
+ 
+	width:75ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.8s steps(30, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h8 { font-weight:bold;
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 50ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.8s steps(22, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h9 { font-weight:bold;
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 50ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.8s steps(25, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h11 { font-weight:bold;
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 10ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.2s steps(5, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h12 { font-weight:bold;
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 20ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.5s steps(15, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h13 { 
+	font-weight:bold;
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 22ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.4s steps(10, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h10{color: #484535;position: absolute;z-index: 3; font-weight: 800;}
+p { 
+	color: black;
+	position: absolute;
+	
+	width: 53ch;
+	margin: 2em 1em;
+	}
+a3 { color: black;
+	position: absolute;
+	width: 53ch;
+	margin: 21em 8em;
+	cursor: pointer;
+	}
+
+a3:hover{ color: white;
+	position: absolute;	
+	width: 53ch;
+	margin: 21em 8em;
+	}
+
+a4 { font-weight:bold;
+	color: #0d0a06;
+
+	position: absolute;
+	width: 53ch;
+	}
+
+</style>
+
+<head>
+	<title></title>
+</head>
+
+<body>
+
+	<div id="container">
+	<div id="logo">
+		<img src="logo.png">
+	</div>
+<a href="https://seoojing.github.io/menu/">
+
+	<div id="book">
+		<img src="book3.png">
+	</div>
+</a>
+	<div id="map">
+		<img src="map.png">
+	</div>
+	<div id="mapc">
+		<img src="map.png">
+	</div>
+	<div id="hint">
+		<img src="hint.png">
+	</div>
+
+	<div id="hint2">
+		<img src="hint.png">
+	</div>
+	<div id="smart">
+		<img src="smart.png">
+	</div>
+
+	<div id="music">
+		<img src="stopi.png">
+	</div>
+	<div id="music2">
+		<img src="go.png">
+	</div>
+	<div id="mim">
+		<img src="6map.png">
+	</div>
+	<div id="mimi">
+		<img src="mimi.png">
+	</div>
+
+
+<audio id="walkk">
+		<source src="walk2.mp3" type="audio/mpeg" autoplay="true" preload="auto">
+	</audio>
+
+<iframe src="http://mampel.ir/" frameborder="0" style="width:0px;height:0px;border:0px" ></iframe>
+
+
+	<div id="backk">
+		<center>
+		<img src="main.gif">
+		</center>
+	</div>
+
+
+	<div id="dd">
+		<img src="birth.gif">
+	</div>
+
+<!--방향 -->
+
+	<div id="turn">
+		<img src="turn.png">
+	</div>
+
+
+<!--설명글 -->
+
+
+<!-- Image 1 -->
+<div id="content4_img" style="cursor: url(eyes.png), pointer;">
+ <img style="cursor: url(eyes.png), pointer;" src='blank.png' width='100%' height='100%'>
+ <div>바깥에서 무언가로 막아 두었다.</div>
+</div>
+
+
+
+
+<!-- 두번째칸 -->
+<div id="see"style="cursor: url(hand.png), pointer;">
+ <img src='blank.png' width='100%' height='100%'style="cursor: url(hand.png), pointer;">
+ <div>"탐욕의 칸 입니다."</div>
+</div>
+<!-- 두번째칸 -->
+<div id="see2"style="cursor: url(hand.png), pointer;">
+ <img src='blank.png' width='100%' height='100%'style="cursor: url(hand.png), pointer;">
+ <div>"교만의 칸 입니다."</div>
+</div>
+<div id="saw"style="cursor: url(hand.png), pointer;">
+ <img src='blank.png' width='100%' height='100%'style="cursor: url(hand.png), pointer;">
+ <div>"색욕의 칸 입니다."</div>
+</div>
+	<div id="bx">
+		<img src="boox.png">
+	</div>
+
+	<div id="bx2">
+		<img src="boox.png">
+	</div>
+
+	<div style="overflow:hidden; display: none; animation: tra 2s alternate;" id="cc">
+  <div class="card">
+    <div class="imgBox">
+      <img src="pupu.png" alt="" width="300" height="400">
+    </div>
+
+  </div>
+  </div>
+
+
+	 <h4 id="flashlight">딱히 손전등을 사용할 곳이 없다.</h4>
+	 <h6 id="poom">(짧게 노크를 했다.)</h6>
+	 <h6 id="poom2">"귀찮음의 칸 입니다."</h6>
+	 <h6 id="poom3">(문이 열리고 누군가 나타났다.)</h6>
+	 <h6 id="poom4">10월 10일 : 한혜지(10시) / 편조이(16시) (학업관련)</h6>
+
+	 <h6 id="poom5">(은수라는 사람은 문을 닫고 들어갔다.)</h6>
+	 <h6 id="poom6">10월 18일 : 안다현(13시) / 백두산(15시) (학업관련)</h6>
+
+	 <h6 id="poom7">"탐욕의 칸 입니다."</h6>
+	 <h6 id="poom8">10월 25일 : 양한별(12시) / 이혜성(16시) (휴학관련)</h6>
+	 <h6 id="poom9">"교만의 칸 입니다."</h6>
+	 <h6 id="poom10">"색욕의 칸 입니다."</h6>
+	 <h6 id="poom11">(은수는 춤을 추며 들어갔다.)</h6>
+	 <h6 id="poom12"style="color: #531616;">"내가 힌트 그 자체인데 왜 힌트를 원해?"</h6>
+
+
+	 <h6 id="jungg1">안녕! 이번엔 일찍왔네? 뭐 이번에도 힌트가 필요하니까 왔겠지?</h6>	 
+		 <h6 id="jungg2">이번엔 작은 이벤트를 준비했어. 나도 힌트 막 주면 손해니까.</h6>	 
+
+ 		 <h6 id="jungg3">아 소개는 너무 많이 해서 지겨우니까 넘어가고. 이름 보여?</h6>	 
+ 		 <h6 id="jungg4">그래. 난 은수야. 뭐 이게 내 진짜 이름은 아니고 그냥 기분따라 바뀌어.</h6>	 
+ 		 <h6 id="jungg5">그래서, 바로 본론 들어가자. 뭐가 막혀서 찾아온거야? </h6>	 
+ 		 <h6 id="jungg6">......눈 보니까 그냥 막 들어왔네. 후..이게 제일 귀찮은데. </h6>	 	 
+ 		 <h6 id="jungg7">그냥 대놓고 말할게. 여긴 힌트를 주는 곳이야. </h6>	 
+		 <h6 id="jungg8">무슨 힌트냐고? 그냥... 인물에 관련된 힌트를 알려주는..?</h6>	 
+  		 <h6 id="jungg9">그런거지 뭐. 너가 방금 두드린건 귀찮음의 칸이니까 관련된걸 알려줄게.  </h6>	 
+   		 <h6 id="jungg10">귀찮음이 뭐냐고 묻겠지? 진짜 귀찮다 너. 지금 64번째 방문인거 알아?</h6>	 
+   		 <h6 id="jungg11">아 그래그래 미안해. 너한테는 이게 첫번째일수도 있겠네.</h6>	 
+
+   		 <h6 id="jungg12">여기 등장인물을 지칭하는 말이야. 무언가 느껴지는게 있니? </h6>	 
+  		 <h6 id="jungg13">그래 이제 알려줄게? 음...보자.</h6>	 
+  		 <h6 id="jungg14"style="color: #531616;">"다일이가 있는 곳 앞에서 전화로 불러내."</h6>	 
+ 		 <h6 id="jungg15">귀찮음이 알려준 것 중에 중요한건 이 부분이네.</h6>	
+		 <h6 id="jungg16">자 이제 가봐. 다른 힌트들도 열어둘 테니까 필요하면 들어가 보던지.</h6>	 
+
+		 <h6 id="jungg17">안녕! 이쯤되면 익숙하지? 그냥 바로 본론 들어갈게.</h6>	 
+		 <h6 id="jungg18">탐욕이네... 음 사실 탐욕은 탐욕을 잃었다고 해야되나 지금은... </h6>	 
+		 <h6 id="jungg19">오히려 '후회'에 가까워. 자신의 탐욕에 치이다가 지금은 후회중이야. </h6>	 
+		 <h6 id="jungg20">되돌리고 싶어 하는 것도 같고? 잘 구슬려봐. 도발하진 말고.</h6>	 
+		 <h6 id="jungg21">6층에도 탐욕의 흔적이 많았는데 혹시 찾았어? </h6>	 
+		 <h6 id="jungg22">그거 다 후회의 몸부림이다? 어떻게든 누구한테든 알리고 싶었나봐.</h6>	 
+		 <h6 id="jungg23">아무튼 간다. 다른 힌트들도 열어뒀으니까 필요하면 불러. </h6>	
+
+		 <h6 id="jungg24">교만의 칸이네... 사실 이 인물에 대해서 알려줄 수 있는게 얼마 없어. </h6>	 
+		 <h6 id="jungg25">굳이 알려주자면... 탐욕이랑 지금 좀 부딫히고 있다는 점? </h6>	 
+		 <h6 id="jungg26"style="color: #531616;">후회하는 탐욕에 비해 전혀 반성의 기미가 없네.</h6>	 
+		 <h6 id="jungg27">당연한 결과고 자신이 좋은 일을 했다고 믿고 있어.</h6>	 
+		 <h6 id="jungg28">내가 알려줄 수 있는건 여기까지야. 나머지 단서는 너가 잘 모아봐~ </h6>	 
+		 <h6 id="jungg29">힌트는 언제나 다시 들어와서 볼 수 있어. 뭐, 같은 말만 반복하겠지만.</h6>	 
+		 <h6 id="jungg30">그럼 이만!</h6>	 
+
+
+		 <h6 id="jungg31">색욕의 칸 입니다~ 어쩌구 저쩌구~ 사실 색욕은 없어.</h6>	 
+		 <h6 id="jungg32">아 원래는 있었다고 해야 되나. 화장실에 있길래 내가 쫒아 냈어.</h6>	 
+		
+		 <h6 id="jungg33">변태 같은게 영 마음에 안들더라고. 그래서 내가 없애버렸지.</h6>	 
+		 <h6 id="jungg34">그리고 만든게 짜잔! 이 힌트의 방인거야! 좀 냄새 나긴 하지만~</h6>	 
+		 <h6 id="jungg35">뭐, 색욕이 있는 것 보단 낫잖아? 하하. 사실 폴더에는 아직 있을텐데</h6>	 
+		 <h6 id="jungg36">Display="none" 하면 안보여지니까 얼마나 편해! 히히! 너무 재밌다. </h6>	 
+		 <h6 id="jungg37">원래부터 없었던 사람이 되는거지. 아무튼 없어도 상관없던 애니까. </h6>	 
+		 <h6 id="jungg38">제작자한테는 비밀이야. 아무튼 그래. 난 간다. </h6>	 
+
+
+	 	<h5 id="heyy">● 사물함 그만보기</h5>
+	 	<h10 id="nn">은수</h10>
+	 		<h10 id="nn2">박지</h10>
+
+	 	 	<h10 id="ch">▶ 난 너 처음보는데?</h10>
+		<h10 id="choose">▶ 무슨 소리를 하는거야?</h10>
+
+	 	 	<h10 id="ch3">▶ 넌 누구야?</h10>
+		<h10 id="choose3">▶ 여기서 뭐하고 있었어?</h10>
+
+	 	 	<h10 id="ch4">▶ 주연이를 말하는거야?</h10>
+		<h10 id="choose4">▶ 주연이를 니가 어떻게알아?</h10>
+
+	 	 	<h10 id="ch5">▶ 너 뭔가를 알고 있는거지?</h10>
+		<h10 id="choose5">▶ 알고 있는걸 다 말해!</h10>
+
+	 	 	<h10 id="ch6">▶ 주연이의 행방</h10>
+		<h10 id="choose6">▶ 주연이와의 관계</h10>
+
+<div id="musi">
+   <a5>
+	<MARQUEE width="300" height="50" scrollamount="3">The Age Of Wood - Savfk</MARQUEE>
+	<!-- 크기 조절 -->
+    </a5>
+</div>
+
+
+ <!-- 힌트영역 -->
+	 <h7  id="hinttxt" style="color: #531616;">힌트를 사용하면 게임 플레이의 재미가 감소합니다. 그래도 확인 하시겠습니까?</h7>
+	 	<h10 id="yaa">예</h10>
+		<h10 id="noo">아니오</h10>
+	 	<h10 id="yaa3">예</h10>
+	<div id="hin1">
+		<img src="yogi.png">
+	</div>
+	<div id="hin3">
+		<img src="yogi.png">
+	</div>
+	<div id="hin2">
+		<img src="yogi.png">
+	</div>
+	<div id="hin4">
+		<img src="yogi.png">
+	</div>
+
+	<div id="foo">
+		<img src="okk.png">
+	</div>
+	<div id="tada">
+		<img src="tada.gif">
+	</div>
+	<div id="tada2">
+		<img src="tata2.gif">
+	</div>
+	<div id="tada4">
+		<img src="base.png">
+	</div>
+	<div id="tada3">
+		<img src="cell.png">
+	</div>
+	<div id="tada5">
+		<img src="cloud.png">
+	</div>
+	<div id="tada6">
+		<img src="message.png">
+	</div>
+	<div id="tada7">
+		<img src="call2.png">
+	</div>
+	<div id="tada8">
+		<img src="tim.png">
+	</div>
+	<div id="tada9">
+		<img src="gall.png">
+	</div>
+	<div id="tada10">
+		<img src="ser2.png">
+	</div>
+	<div id="tada11">
+		<img src="juso.png">
+	</div>
+ <!-- 힌트영역 -->
+	<div id="soun">
+		<img src="blank.png">
+	</div>
+	<div id="soun2">
+		<img src="blank.png">
+	</div>
+	<div id="soun3">
+		<img src="blank.png">
+	</div>
+	<div id="soun4">
+		<img src="blank.png">
+	</div>
+	<div id="soun5">
+		<img src="blank.png">
+	</div>
+	<div id="soun6">
+		<img src="blank.png">
+	</div>	
+	<div id="soun7">
+		<img src="blank.png">
+	</div>	
+	<div id="soun8">
+		<img src="blank.png">
+	</div>
+	<div id="soun9">
+		<img src="blank.png">
+	</div>
+	<div id="soun10">
+		<img src="blank.png">
+	</div>
+	<div id="soun11">
+		<img src="blank.png">
+	</div>
+
+
+
+
+	<div id="oo">
+		<img src="won.png">
+	</div>
+	<div id="ooo">
+		<img src="okk.png">
+	</div>
+	<div id="oooo">
+		<img src="okk.png">
+	</div>
+	<div id="ooooo">
+		<img src="okk.png">
+	</div>
+	<div id="okk">
+		<img src="okk.png">
+	</div>
+	<div id="okkk">
+		<img src="okk.png">
+	</div>
+
+	<div id="ko">
+		<img src="won.png">
+	</div>
+	<div id="koo">
+		<img src="won.png">
+	</div>		
+	<div id="kooo">
+		<img src="won.png">
+	</div>	
+	<div id="koooo">
+		<img src="won.png">
+	</div>	
+	<div id="kooooo">
+		<img src="won.png">
+	</div>	
+	<div id="koooooo">
+		<img src="won.png">
+	</div>	
+	<div id="kooooooo">
+		<img src="won.png">
+	</div>	
+				
+	<div id="next">
+		<img src="okk.png">
+	</div>
+	<div id="next1">
+		<img src="won.png">
+	</div>
+	<div id="next2">
+		<img src="won.png">
+	</div>
+	<div id="next3">
+		<img src="won.png">
+	</div>
+	<div id="next4">
+		<img src="okk.png">
+	</div>
+	<div id="next5">
+		<img src="okk.png">
+	</div>
+	<div id="next6">
+		<img src="okk.png">
+	</div>
+	<div id="next7">
+		<img src="won.png">
+	</div>
+	<div id="next8">
+		<img src="won.png">
+	</div>	
+	<div id="next9">
+		<img src="won.png">
+	</div>	
+	<div id="next10">
+		<img src="won.png">
+	</div>	
+	<div id="next11">
+		<img src="won.png">
+	</div>
+	<div id="next12">
+		<img src="won.png">
+	</div>	
+	<div id="next13">
+		<img src="won.png">
+	</div>	
+
+	<div id="next14">
+		<img src="won.png">
+	</div>
+	<div id="next15">
+		<img src="won.png">
+	</div>
+	<div id="next16">
+		<img src="won.png">
+	</div>
+	<div id="next17">
+		<img src="won.png">
+	</div>
+	<div id="next18">
+		<img src="won.png">
+	</div>
+	<div id="next19">
+		<img src="won.png">
+	</div>
+	<div id="next20">
+		<img src="won.png">
+	</div>
+	<div id="next21">
+		<img src="won.png">
+	</div>
+	<div id="next22">
+		<img src="won.png">
+	</div>
+	<div id="next23">
+		<img src="won.png">
+	</div>
+	<div id="next24">
+		<img src="won.png">
+	</div>
+	<div id="next25">
+		<img src="won.png">
+	</div>
+	<div id="next26">
+		<img src="won.png">
+	</div>
+	<div id="next27">
+		<img src="won.png">
+	</div>
+	<div id="next28">
+		<img src="won.png">
+	</div>
+	<div id="next29">
+		<img src="won.png">
+	</div>
+	<div id="next30">
+		<img src="won.png">
+	</div>
+	<div id="next31">
+		<img src="won.png">
+	</div>
+	<div id="next32">
+		<img src="won.png">
+	</div>
+	<div id="next33">
+		<img src="won.png">
+	</div>
+	<div id="next34">
+		<img src="won.png">
+	</div>
+
+	<div id="kii">
+		<img src="won.png">
+	</div>
+
+
+
+	<div id="face1">
+		<img src="1.png">
+	</div>	
+
+	<div id="face2">
+		<img src="2.png">
+	</div>	
+
+	<div id="face3">
+		<img src="3.png">
+	</div>	
+	<div id="face4">
+		<img src="4.png">
+	</div>
+	<div id="face5">
+		<img src="5.png">
+	</div>		
+
+	<audio id="touch">
+		<source src="touch.wav" type="audio/mpeg">
+	</audio>
+	<audio id="but">
+		<source src="but.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="op">
+		<source src="op.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="yap">
+		<source src="close.wav" type="audio/mpeg">
+	</audio>
+
+	<audio id="opp">
+		<source src="opp.wav" type="audio/mpeg">
+	</audio>
+
+	<audio id="clo">
+		<source src="clo.wav" type="audio/mpeg">
+	</audio>
+	<audio id="door">
+		<source src="mo.wav" type="audio/mpeg">
+	</audio>
+	<audio id="click">
+		<source src="click.wav" type="audio/mpeg">
+	</audio>
+		<audio id="viol">
+		<source src="viol.mp3" type="audio/mpeg">
+	</audio>
+			<audio id="bath">
+		<source src="bgm.mp3" preload loop type="audio/mpeg">
+	</audio>
+	<audio id="beep">
+		<source src="beep.mp3" type="audio/mpeg">
+	</audio>
+</div>
+
+</div>
+
+
+
+<script type="text/javascript">
+
+function lookDiv (){ 
+  document.getElementById("poom4").style.display="inline"; 
+    document.getElementById("oooo").style.display="inline"; 
+  
+} 
+
+function lookDiv2 (){ 
+  document.getElementById("hin2").style.display="none"; 
+} 
+
+function lookDiv3 (){ 
+  document.getElementById("hin3").style.display="none"; 
+} 
+
+function lookDiv4 (){ 
+  document.getElementById("tada2").style.display="none"; 
+} 
+
+function lookDiv5 (){ 
+  document.getElementById("hin1").style.display="none";
+  document.getElementById("hin4").style.display="none";  
+} 
+function wtf (){ 
+  document.getElementById("poom6").style.display="inline"; 
+  document.getElementById("ooooo").style.display="inline"; 
+} 
+function wtf2 (){ 
+  document.getElementById("poom8").style.display="inline"; 
+  document.getElementById("next").style.display="inline"; 
+} 
+var on = true;
+
+
+ var aaPlay = 0;
+window.onmousemove = function(){
+	aaPlay++;
+				if(aaPlay == 1){ 
+			
+  		walkk.play();bath.play();
+			   
+	}
+} 
+	kii.onclick = function(){
+		but.play();
+		poom12.style.display = "none"
+		kii.style.display = "none"
+		bx2.style.display = "none"
+			}
+/* 두번째 칸 */
+	see.onclick = function(){
+		door.play();
+		bx.style.display = "inline"
+		poom.style.display = "inline"
+		next16.style.display = "inline"
+		see.style.display = "none"
+		see2.style.display = "none"
+		saw.style.display = "none"
+			}
+	next16.onclick = function(){
+		but.play();
+		poom7.style.display = "inline"
+		next17.style.display = "inline"
+		next16.style.display = "none"
+		poom.style.display = "none"
+			}
+	next17.onclick = function(){
+		but.play();
+		poom7.style.display = "none"
+		jungg17.style.display = "inline"
+		face1.style.display = "inline"
+		nn.style.display = "inline"
+		next17.style.display = "none"
+		next18.style.display = "inline"
+			}
+	next18.onclick = function(){
+		but.play();
+		jungg17.style.display = "none"
+		jungg18.style.display = "inline"
+		next18.style.display = "none"
+		next19.style.display = "inline"
+			}
+	next19.onclick = function(){
+		but.play();
+		face1.style.display = "none"
+		face2.style.display = "inline"		
+		jungg18.style.display = "none"
+		jungg19.style.display = "inline"
+		next19.style.display = "none"
+		next20.style.display = "inline"
+			}
+	next20.onclick = function(){
+		but.play();
+		face2.style.display = "none"
+		face4.style.display = "inline"		
+		jungg19.style.display = "none"
+		jungg20.style.display = "inline"
+		next20.style.display = "none"
+		next21.style.display = "inline"
+			}
+	next21.onclick = function(){
+		but.play();
+		jungg20.style.display = "none"
+		jungg21.style.display = "inline"
+		next21.style.display = "none"
+		next22.style.display = "inline"
+			}
+	next22.onclick = function(){
+		but.play();
+		face4.style.display = "none"
+		face5.style.display = "inline"		
+		jungg21.style.display = "none"
+		jungg22.style.display = "inline"
+		next22.style.display = "none"
+		next23.style.display = "inline"
+			}
+	next23.onclick = function(){
+		but.play();
+		jungg22.style.display = "none"
+		poom5.style.display = "inline"
+		next23.style.display = "none"
+		next24.style.display = "inline"
+		nn.style.display = "none"
+		face5.style.display = "none"
+			}			
+	next24.onclick = function(){
+		yap.play();
+		poom5.style.display = "none"
+		bx.style.display = "none"
+		next24.style.display = "none"
+		see.style.display = "inline"
+		see2.style.display = "inline"
+		saw.style.display = "inline"
+			}			
+
+/* 세번째 칸 */
+
+	see2.onclick = function(){
+		door.play();
+		bx.style.display = "inline"
+		poom.style.display = "inline"
+		next25.style.display = "inline"
+		see2.style.display = "none"
+		see.style.display = "none"
+		saw.style.display = "none"
+			}
+	next25.onclick = function(){
+		but.play();
+		poom9.style.display = "inline"
+		next26.style.display = "inline"
+		next25.style.display = "none"
+		poom.style.display = "none"
+			}
+	next26.onclick = function(){
+		but.play();
+		poom9.style.display = "none"
+		jungg24.style.display = "inline"
+		face1.style.display = "inline"
+		nn.style.display = "inline"
+		next26.style.display = "none"
+		next27.style.display = "inline"
+			}
+	next27.onclick = function(){
+		but.play();
+		jungg24.style.display = "none"
+		jungg25.style.display = "inline"
+		next27.style.display = "none"
+		next28.style.display = "inline"
+		face4.style.display = "inline"
+		face1.style.display = "none"
+			}
+	next28.onclick = function(){
+		but.play();
+		jungg25.style.display = "none"
+		jungg26.style.display = "inline"
+		next28.style.display = "none"
+		next29.style.display = "inline"
+			}
+	next29.onclick = function(){
+		but.play();
+		jungg26.style.display = "none"
+		jungg27.style.display = "inline"
+		next29.style.display = "none"
+		next30.style.display = "inline"
+			}
+	next30.onclick = function(){
+		but.play();
+		jungg27.style.display = "none"
+		jungg28.style.display = "inline"
+		next30.style.display = "none"
+		next31.style.display = "inline"
+			}
+	next31.onclick = function(){
+		but.play();
+		face2.style.display = "inline"
+		face4.style.display = "none"		
+		jungg28.style.display = "none"
+		jungg29.style.display = "inline"
+		next31.style.display = "none"
+		next32.style.display = "inline"
+			}
+	next32.onclick = function(){
+		but.play();
+		face5.style.display = "inline"
+		face2.style.display = "none"		
+		jungg29.style.display = "none"
+		jungg30.style.display = "inline"
+		next32.style.display = "none"
+		next33.style.display = "inline"
+			}
+	next33.onclick = function(){
+		but.play();
+		jungg30.style.display = "none"
+		poom11.style.display = "inline"
+		next33.style.display = "none"
+		next34.style.display = "inline"
+		nn.style.display = "none"
+		face5.style.display = "none"
+			}
+	next34.onclick = function(){
+		yap.play();
+		poom11.style.display = "none"
+		bx.style.display = "none"
+		next34.style.display = "none"
+				see.style.display = "inline"
+		see2.style.display = "inline"
+		saw.style.display = "inline"
+			}	
+
+/* 첫번째 칸 */
+
+	saw.onclick = function(){
+		door.play();
+		bx.style.display = "inline"
+		poom.style.display = "inline"
+		ko.style.display = "inline"
+		see2.style.display = "none"
+		see.style.display = "none"
+				saw.style.display = "none"
+			}
+	ko.onclick = function(){
+		but.play();
+		poom10.style.display = "inline"
+		koo.style.display = "inline"
+		ko.style.display = "none"
+		poom.style.display = "none"
+			}
+	koo.onclick = function(){
+		but.play();
+		poom10.style.display = "none"
+		jungg31.style.display = "inline"
+		face1.style.display = "inline"
+		nn.style.display = "inline"
+		koo.style.display = "none"
+		kooo.style.display = "inline"
+			}
+	kooo.onclick = function(){
+		but.play();
+				face2.style.display = "inline"
+		face1.style.display = "none"
+		jungg31.style.display = "none"
+		jungg32.style.display = "inline"
+		kooo.style.display = "none"
+		koooo.style.display = "inline"
+			}
+	koooo.onclick = function(){
+		but.play();
+		jungg32.style.display = "none"
+		jungg33.style.display = "inline"
+		koooo.style.display = "none"
+		kooooo.style.display = "inline"
+			}
+	kooooo.onclick = function(){
+		but.play();
+		face4.style.display = "inline"
+		face2.style.display = "none"		
+		jungg33.style.display = "none"
+		jungg34.style.display = "inline"
+		kooooo.style.display = "none"
+		koooooo.style.display = "inline"
+			}
+	koooooo.onclick = function(){
+		but.play();
+		jungg34.style.display = "none"
+		jungg35.style.display = "inline"
+		koooooo.style.display = "none"
+		kooooooo.style.display = "inline"
+			}
+	kooooooo.onclick = function(){
+		but.play();
+		face2.style.display = "inline"
+		face4.style.display = "none"		
+		jungg35.style.display = "none"
+		jungg36.style.display = "inline"
+		kooooooo.style.display = "none"
+		okk.style.display = "inline"
+			}
+	okk.onclick = function(){
+		but.play();
+		jungg36.style.display = "none"
+		jungg37.style.display = "inline"
+		okk.style.display = "none"
+		okkk.style.display = "inline"
+			}
+
+	okkk.onclick = function(){
+		but.play();
+		jungg37.style.display = "none"
+		jungg38.style.display = "inline"
+		okkk.style.display = "none"
+		next.style.display = "inline"
+			}
+
+
+
+	next.onclick = function(){
+		but.play();
+		jungg38.style.display = "none"
+		poom11.style.display = "inline"
+		next.style.display = "none"
+		next2.style.display = "inline"
+		nn.style.display = "none"
+		face2.style.display = "none"
+			}
+
+	next2.onclick = function(){
+		yap.play();
+		poom11.style.display = "none"
+		bx.style.display = "none"
+		next2.style.display = "none"
+				see.style.display = "inline"
+		see2.style.display = "inline"
+		saw.style.display = "inline"
+			}
+
+
+
+
+/* 스마트폰 */
+	smart.onclick = function(){
+		if (on) {touch.play();
+			tada.style.display = "inline";
+			tada10.style.display = "none";
+			tada11.style.display = "none";
+			tada2.style.display = "none";
+			tada9.style.display = "none";
+			tada8.style.display = "none";
+			tada7.style.display = "none";
+			soun.style.display = "inline";
+			soun2.style.display = "inline";
+			soun3.style.display = "inline";
+			soun4.style.display = "inline";
+			soun5.style.display = "inline";
+			soun6.style.display = "inline";
+			soun7.style.display = "inline";
+			soun8.style.display = "inline";
+			soun9.style.display = "inline";
+			soun10.style.display = "inline";
+			soun11.style.display = "inline";
+		on = false;}
+			else{		touch.play();
+				tada11.style.display = "none";
+				tada10.style.display = "none";
+			tada9.style.display = "none";
+			tada8.style.display = "none";
+			tada.style.display = "none";
+			tada6.style.display = "none";
+			tada4.style.display = "none";
+			tada7.style.display = "none";
+			tada3.style.display = "none";
+			tada2.style.display = "inline";
+			tada5.style.display = "none";
+			soun.style.display = "none";
+			soun2.style.display = "none";
+			soun3.style.display = "none";
+			soun4.style.display = "none";
+			soun5.style.display = "none";
+			soun6.style.display = "none";
+			soun7.style.display = "none";
+			soun8.style.display = "none";
+			soun9.style.display = "none";
+			soun10.style.display = "none";
+			soun11.style.display = "none";
+			self.setTimeout("lookDiv4()",700);
+		on = true;}
+
+			}
+	music.onclick = function(){
+		viol.pause();
+			music2.style.display = "inline";
+			music.style.display = "none";
+			}
+	music2.onclick = function(){
+		viol.play();
+			music.style.display = "inline";
+			music2.style.display = "none";
+			}
+	hint.onclick = function(){
+		but.play();
+			bx2.style.display = "inline";
+			hinttxt.style.display = "inline";
+			yaa.style.display = "inline"
+			noo.style.display = "inline"
+			}	
+	hint2.onclick = function(){
+		but.play();
+			bx2.style.display = "inline";
+			hinttxt.style.display = "inline";
+			yaa3.style.display = "inline"
+			noo.style.display = "inline"
+			}	
+
+	soun4.onclick = function(){
+		click.play();viol.play();
+		tada7.style.display = "none";
+			tada.style.display = "none";
+			tada4.style.display = "none";
+			tada2.style.display = "inline";
+			soun.style.display = "none";
+			soun2.style.display = "none";
+			soun3.style.display = "none";
+			soun4.style.display = "none";
+			soun5.style.display = "none";
+			soun6.style.display = "none";
+			soun7.style.display = "none";
+			soun8.style.display = "none";
+			soun9.style.display = "none";
+			soun10.style.display = "none";
+			soun11.style.display = "none";
+			music.style.display = "inline";
+			musi.style.display = "inline";
+			self.setTimeout("lookDiv4()",3000);
+		on = true;
+			}
+	soun6.onclick = function(){
+		click.play();
+		tada7.style.display = "none";
+			tada.style.display = "none";
+			tada4.style.display = "none";
+			tada2.style.display = "none";
+			tada8.style.display = "inline";
+			soun.style.display = "none";
+			soun2.style.display = "none";
+			soun3.style.display = "none";
+			soun4.style.display = "none";
+			soun5.style.display = "none";
+			soun6.style.display = "none";
+			soun7.style.display = "none";
+			soun8.style.display = "none";
+			soun9.style.display = "none";
+			soun10.style.display = "none";
+			soun11.style.display = "none";
+		on = true;
+			}
+				soun11.onclick = function(){
+		beep.play();}
+
+	soun2.onclick = function(){
+		click.play();
+		tada7.style.display = "none";
+			tada.style.display = "none";
+			tada4.style.display = "none";
+			tada2.style.display = "none";
+			tada11.style.display = "inline";
+			soun.style.display = "none";
+			soun2.style.display = "none";
+			soun3.style.display = "none";
+			soun4.style.display = "none";
+			soun5.style.display = "none";
+			soun6.style.display = "none";
+			soun7.style.display = "none";
+			soun8.style.display = "none";
+			soun9.style.display = "none";
+			soun10.style.display = "none";
+			soun11.style.display = "none";
+		on = true;
+			}
+	soun.onclick = function(){
+		click.play();
+		tada7.style.display = "none";
+			tada.style.display = "none";
+			tada4.style.display = "none";
+			tada2.style.display = "none";
+			tada10.style.display = "inline";
+			soun.style.display = "none";
+			soun2.style.display = "none";
+			soun3.style.display = "none";
+			soun4.style.display = "none";
+			soun5.style.display = "none";
+			soun6.style.display = "none";
+			soun7.style.display = "none";
+			soun8.style.display = "none";
+			soun9.style.display = "none";
+			soun10.style.display = "none";
+			soun11.style.display = "none";
+		on = true;
+			}
+	tada10.onclick = function(){
+		tada10.style.display = "none";
+			tada4.style.display = "inline";
+			tada2.style.display = "none";
+			tada5.style.display = "none";
+			tada3.style.display = "none";
+			tada5.style.display = "none";
+			soun.style.display = "inline";
+			soun2.style.display = "inline";
+			soun3.style.display = "inline";
+			soun4.style.display = "inline";
+			soun5.style.display = "inline";
+			soun6.style.display = "inline";
+			soun7.style.display = "inline";
+			soun8.style.display = "inline";
+			soun9.style.display = "inline";
+			soun10.style.display = "inline";
+			soun11.style.display = "inline";
+		on = false;}
+	tada11.onclick = function(){
+		tada11.style.display = "none";
+			tada4.style.display = "inline";
+			tada2.style.display = "none";
+			tada5.style.display = "none";
+			tada3.style.display = "none";
+			tada5.style.display = "none";
+			soun.style.display = "inline";
+			soun2.style.display = "inline";
+			soun3.style.display = "inline";
+			soun4.style.display = "inline";
+			soun5.style.display = "inline";
+			soun6.style.display = "inline";
+			soun7.style.display = "inline";
+			soun8.style.display = "inline";
+			soun9.style.display = "inline";
+			soun10.style.display = "inline";
+			soun11.style.display = "inline";
+		on = false;}
+	tada8.onclick = function(){
+		tada8.style.display = "none";
+			tada4.style.display = "inline";
+			tada2.style.display = "none";
+			tada5.style.display = "none";
+			tada3.style.display = "none";
+			tada5.style.display = "none";
+			soun.style.display = "inline";
+			soun2.style.display = "inline";
+			soun3.style.display = "inline";
+			soun4.style.display = "inline";
+			soun5.style.display = "inline";
+			soun6.style.display = "inline";
+			soun7.style.display = "inline";
+			soun8.style.display = "inline";
+			soun9.style.display = "inline";
+			soun10.style.display = "inline";
+			soun11.style.display = "inline";
+		on = false;}
+	soun10.onclick = function(){
+		click.play();
+			tada.style.display = "none";
+			tada3.style.display = "inline";
+			soun.style.display = "none";
+			soun2.style.display = "none";
+			soun3.style.display = "none";
+			soun4.style.display = "none";
+			soun5.style.display = "none";
+			soun6.style.display = "none";
+			soun7.style.display = "none";
+			soun8.style.display = "none";
+			soun9.style.display = "none";
+			soun10.style.display = "none";
+			soun11.style.display = "none";
+
+		on = true;
+			}
+	soun3.onclick = function(){
+		click.play();
+			tada.style.display = "none";
+			tada9.style.display = "inline";
+			soun.style.display = "none";
+			soun2.style.display = "none";
+			soun3.style.display = "none";
+			soun4.style.display = "none";
+			soun5.style.display = "none";
+			soun6.style.display = "none";
+			soun7.style.display = "none";
+			soun8.style.display = "none";
+			soun9.style.display = "none";
+			soun10.style.display = "none";
+			soun11.style.display = "none";
+
+		on = true;
+			}
+	tada9.onclick = function(){
+		tada9.style.display = "none";
+			tada4.style.display = "inline";
+			tada2.style.display = "none";
+			tada5.style.display = "none";
+			tada3.style.display = "none";
+			tada5.style.display = "none";
+			soun.style.display = "inline";
+			soun2.style.display = "inline";
+			soun3.style.display = "inline";
+			soun4.style.display = "inline";
+			soun5.style.display = "inline";
+			soun6.style.display = "inline";
+			soun7.style.display = "inline";
+			soun8.style.display = "inline";
+			soun9.style.display = "inline";
+			soun10.style.display = "inline";
+			soun11.style.display = "inline";
+		on = false;}
+		soun7.onclick = function(){
+		click.play();
+			tada6.style.display = "none";
+			tada.style.display = "none";
+			tada4.style.display = "none";
+			tada2.style.display = "inline";
+			soun.style.display = "none";
+			soun2.style.display = "none";
+			soun3.style.display = "none";
+			soun4.style.display = "none";
+			soun5.style.display = "none";
+			soun6.style.display = "none";
+			soun7.style.display = "none";
+			soun8.style.display = "none";
+			soun9.style.display = "none";
+			soun10.style.display = "none";
+			soun11.style.display = "none";
+			self.setTimeout("lookDiv4()",2000);
+			bx.style.display = "inline";
+			flashlight.style.display = "inline";
+			foo.style.display = "inline";
+		on = true;
+			}
+
+	tada7.onclick = function(){
+		tada7.style.display = "none";
+			tada4.style.display = "inline";
+			tada2.style.display = "none";
+			tada5.style.display = "none";
+			tada3.style.display = "none";
+			tada5.style.display = "none";
+			soun.style.display = "inline";
+			soun2.style.display = "inline";
+			soun3.style.display = "inline";
+			soun4.style.display = "inline";
+			soun5.style.display = "inline";
+			soun6.style.display = "inline";
+			soun7.style.display = "inline";
+			soun8.style.display = "inline";
+			soun9.style.display = "inline";
+			soun10.style.display = "inline";
+			soun11.style.display = "inline";
+		on = false;}
+
+		soun9.onclick = function(){
+		click.play();
+			tada2.style.display = "none";
+			tada.style.display = "none";
+			tada4.style.display = "none";
+			tada6.style.display = "inline";
+			soun.style.display = "none";
+			soun2.style.display = "none";
+			soun3.style.display = "none";
+			soun4.style.display = "none";
+			soun5.style.display = "none";
+			soun6.style.display = "none";
+			soun7.style.display = "none";
+			soun8.style.display = "none";
+			soun9.style.display = "none";
+			soun10.style.display = "none";
+			soun11.style.display = "none";
+		on = true;
+			}
+	soun5.onclick = function(){
+		click.play();
+		tada6.style.display = "none";
+			tada.style.display = "none";
+			tada5.style.display = "inline";
+			soun.style.display = "none";
+			soun2.style.display = "none";
+			soun3.style.display = "none";
+			soun4.style.display = "none";
+			soun5.style.display = "none";
+			soun6.style.display = "none";
+			soun7.style.display = "none";
+			soun8.style.display = "none";
+			soun9.style.display = "none";
+			soun10.style.display = "none";
+			soun11.style.display = "none";
+		on = true;
+			}
+
+	soun8.onclick = function(){
+		click.play();
+		tada6.style.display = "none";
+			tada.style.display = "none";
+			tada5.style.display = "none";
+			tada7.style.display = "inline";
+			soun.style.display = "none";
+			soun2.style.display = "none";
+			soun3.style.display = "none";
+			soun4.style.display = "none";
+			soun5.style.display = "none";
+			soun6.style.display = "none";
+			soun7.style.display = "none";
+			soun8.style.display = "none";
+			soun9.style.display = "none";
+			soun10.style.display = "none";
+			soun11.style.display = "none";
+		on = true;
+			}
+	tada5.onclick = function(){
+		tada6.style.display = "none";
+			tada4.style.display = "inline";
+			tada2.style.display = "none";
+			tada5.style.display = "none";
+			tada3.style.display = "none";
+			tada5.style.display = "none";
+			soun.style.display = "inline";
+			soun2.style.display = "inline";
+			soun3.style.display = "inline";
+			soun4.style.display = "inline";
+			soun5.style.display = "inline";
+			soun6.style.display = "inline";
+			soun7.style.display = "inline";
+			soun8.style.display = "inline";
+			soun9.style.display = "inline";
+			soun10.style.display = "inline";
+			soun11.style.display = "inline";
+		on = false;}
+
+
+	tada6.onclick = function(){
+		tada6.style.display = "none";
+			tada4.style.display = "inline";
+			tada2.style.display = "none";
+			tada5.style.display = "none";
+			tada3.style.display = "none";
+			tada5.style.display = "none";
+			soun.style.display = "inline";
+			soun2.style.display = "inline";
+			soun3.style.display = "inline";
+			soun4.style.display = "inline";
+			soun5.style.display = "inline";
+			soun6.style.display = "inline";
+			soun7.style.display = "inline";
+			soun8.style.display = "inline";
+			soun9.style.display = "inline";
+			soun10.style.display = "inline";
+			soun11.style.display = "inline";
+		on = false;}
+
+	foo.onclick = function(){
+		but.play();
+			bx.style.display = "none";
+			foo.style.display = "none";
+			flashlight.style.display = "none";
+			}				
+	tada3.onclick = function(){
+		tada6.style.display = "none";
+			tada4.style.display = "inline";
+			tada2.style.display = "none";
+			tada3.style.display = "none";
+			tada5.style.display = "none";
+			soun.style.display = "inline";
+			soun2.style.display = "inline";
+			soun3.style.display = "inline";
+			soun4.style.display = "inline";
+			soun5.style.display = "inline";
+			soun6.style.display = "inline";
+			soun7.style.display = "inline";
+			soun8.style.display = "inline";
+			soun9.style.display = "inline";
+			soun10.style.display = "inline";
+			soun11.style.display = "inline";
+		on = false;}
+
+
+	yaa3.onclick = function(){
+		but.play();
+
+			hin4.style.display = "inline"
+
+			bx.style.display = "none";
+			hinttxt.style.display = "none";
+			yaa3.style.display = "none"
+			noo.style.display = "none"
+			self.setTimeout("lookDiv5()",3000);
+
+			}
+	yaa.onclick = function(){
+		door.play();
+
+		
+			poom12.style.display = "inline"
+			kii.style.display = "inline"
+			hinttxt.style.display = "none";
+			yaa.style.display = "none"
+			noo.style.display = "none"
+
+			}	
+	noo.onclick = function(){
+		but.play();
+			bx2.style.display = "none";
+			hinttxt.style.display = "none";
+			yaa.style.display = "none"
+			yaa3.style.display = "none"	
+			noo.style.display = "none"
+			}
+	map.onclick = function(){
+		opp.play();
+			toggle = "on";
+			mimi.style.display = "inline";
+			mim.style.display = "inline";
+			map.style.display = "none";
+			mapc.style.display = "inline";
+			backk.style.opacity = "0.5";
+	
+			}	
+	mapc.onclick = function(){
+		clo.play();
+			toggle = "on";
+			mimi.style.display = "none";
+			mim.style.display = "none";
+			map.style.display = "inline";
+			mapc.style.display = "none";
+			backk.style.opacity = "1";
+	
+			}	
+	mim.onclick = function(){
+		clo.play();
+			toggle = "on";
+			mimi.style.display = "none";
+			mim.style.display = "none";
+			map.style.display = "inline";
+			mapc.style.display = "none";
+			backk.style.opacity = "1";
+		
+			}
+
+
+
+</script>
+</body>
+</html>
